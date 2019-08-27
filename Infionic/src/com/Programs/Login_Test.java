@@ -61,18 +61,18 @@ public class Login_Test {
 	  Thread.sleep(4000);
 	  
 	  HTTPLinkstatusChecker r=new HTTPLinkstatusChecker();
-	  HTTPLinkstatusChecker.HTTPLinkstatusChecker(URL);
+	  HTTPLinkstatusChecker.HTTPLinkstatusCheck(URL);
 		  
-		  System.out.println(HTTPLinkstatusChecker.HTTPLinkstatusChecker(URL));
+		  System.out.println(HTTPLinkstatusChecker.HTTPLinkstatusCheck(URL));
 
 
-		  sh.getRow(i).createCell(3).setCellValue((HTTPLinkstatusChecker.HTTPLinkstatusChecker(URL)));
+		  sh.getRow(i).createCell(3).setCellValue((HTTPLinkstatusChecker.HTTPLinkstatusCheck(URL)));
 		  i++;
 	  
 	  wb.write(fos);
 	  wb.close();
 		
-	  assertEquals(HTTPLinkstatusChecker.HTTPLinkstatusChecker(URL), "OK");
+	  assertEquals(HTTPLinkstatusChecker.HTTPLinkstatusCheck(URL), "OK");
 	  
 	 try
 	 {
