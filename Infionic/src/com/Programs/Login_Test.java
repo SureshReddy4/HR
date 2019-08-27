@@ -1,5 +1,7 @@
 package com.Programs;
 
+import static org.testng.Assert.assertEquals;
+
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -58,6 +60,19 @@ public class Login_Test {
 	
 	  Thread.sleep(4000);
 	  
+	  HTTPLinkstatusChecker r=new HTTPLinkstatusChecker();
+	  HTTPLinkstatusChecker.HTTPLinkstatusChecker(URL);
+		  
+		  System.out.println(HTTPLinkstatusChecker.HTTPLinkstatusChecker(URL));
+
+
+		  sh.getRow(i).createCell(3).setCellValue((HTTPLinkstatusChecker.HTTPLinkstatusChecker(URL)));
+		  i++;
+	  
+	  wb.write(fos);
+	  wb.close();
+		
+	  assertEquals(HTTPLinkstatusChecker.HTTPLinkstatusChecker(URL), "OK");
 	  
 	 try
 	 {
